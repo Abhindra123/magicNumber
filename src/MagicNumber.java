@@ -11,8 +11,9 @@ public class MagicNumber {
     public static int print(int n){
         int val;
         val=magicNumber(n);
-        while(val>9) {
+        if(val>9) {
                 val = magicNumber(val);
+                return print(val);
         }
         if (val == 1) {
             return 1;
